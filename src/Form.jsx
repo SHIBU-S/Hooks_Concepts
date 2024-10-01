@@ -9,7 +9,7 @@ function Form(){
     const [name,setname] = useState("");
     const [password,setpassword] = useState("");
     const [email,setemail] = useState("");
-    const [phno,setphno] = useState("");
+    // const [phno,setphno] = useState("");
     const [gender,setgender] = useState("");
 
 
@@ -18,8 +18,8 @@ function Form(){
     const [emailcolor,setemailcolor] = useState({color:""});
     const [phnocolor,setphnocolor] = useState({color:""});
 
-    const {nameresult,setnameresult,passwordresult,setpasswordresult,emailresult,setemailresult,phnoresult,setphnoresult,genderresult,setgenderresult,  
-        display,setdisplay,setdisplaypwd,setdisplayemail,setdisplaygender,setdisplayphno} = useContext(userContext);
+
+    const {nameresult,setnameresult,passwordresult,setpasswordresult,emailresult,setemailresult,phnoresult,setphnoresult, setdisplay,setdisplaypwd,setdisplayemail,setdisplayphno, phno,setphno} = useContext(userContext);
 
     return(
         <>
@@ -52,16 +52,16 @@ function Form(){
                     </Col>
                 </Row>
 
-                <Row className="bg-info-subtle pt-4">
+                {/* <Row className="bg-info-subtle pt-4">
                     <Col>
                         Gender : <input type="radio" /> Male
                         <input type="radio" /> Female
                     </Col>
-                </Row>
+                </Row> */}
 
                 <Row className="bg-info-subtle pt-4 pb-4">
                     <Col>
-                        <button class="btn btn-primary" style={{width:"30%"}} onClick={submit} type="button">Button</button>
+                        <button class="btn btn-primary" style={{width:"30%"}} onClick={submit} type="button">Submit</button>
                     </Col>
                 </Row>
             </Container>
@@ -154,47 +154,6 @@ function Form(){
 
 
 
-
-// function Form(){
-
-//     const [inputvalue,setinputvalue] = useState({name:"",password:"",email:""});
-
-//     const [color,setcolor] = useState("");
-
-//     const {nameresult,setnameresult,passwordresult,setpasswordresult,emailresult,setemailresult,genderresult,setgenderresult} = useContext(userContext);
-
-//     return(
-//         <>
-//             Enter Name : <input type="text" placeholder="enter your name.." value={inputvalue.name} onChange={(name)=>setinputvalue(name.target.value)}></input>  
-//                 <p style={{color}}>{nameresult}</p>
-//                 <button onClick={submit}>Submit</button>
-//         </>
-//     )
-
-//     function submit()
-//     {
-//         let pattern1=/^([a-zA-Z]{2,30})$/;
-//         if(inputvalue.name==="")
-//         {
-//             setnameresult("Please Enter your name");
-//             setcolor("Red");
-//         }
-//         else if(!pattern1.test(inputvalue.name))
-//         {
-//             setnameresult("Invalid name");
-//             setcolor("Red");
-//         }
-//         else
-//         {
-//             setnameresult(`Your Name is : ${inputvalue.name}`);
-//         }
-
-
-//     }
-// }
-
-
-    
-    export default Form;
+export default Form;
 
 

@@ -11,6 +11,8 @@ function Component1(){
     const [genderresult,setgenderresult] = useState("");
     const [phnoresult,setphnoresult] = useState("");
 
+    const [phno,setphno] = useState("");
+
     const [display,setdisplay] = useState("");
     const [displaypwd,setdisplaypwd] = useState("");
     const [displayemail,setdisplayemail] = useState("");
@@ -19,8 +21,8 @@ function Component1(){
 
     return(
         <>
-            <h3>Hello ... Welcome You All</h3>
-            <userContext.Provider value={{nameresult,setnameresult,passwordresult,setpasswordresult,emailresult,setemailresult,genderresult,setgenderresult,phnoresult,setphnoresult, display,setdisplay,displaypwd,setdisplaypwd,displayemail,setdisplayemail,displaygender,setdisplaygender,displayphno,setdisplayphno}}>
+            <userContext.Provider value={{nameresult,setnameresult,passwordresult,setpasswordresult,emailresult,setemailresult,genderresult,setgenderresult,phnoresult,setphnoresult, display,setdisplay,displaypwd,setdisplaypwd,displayemail,setdisplayemail,displaygender,setdisplaygender,displayphno,setdisplayphno, phno,setphno}}>
+            <h3>Hello {display} {phno} ... Welcoming You</h3>
                 <Form/>
             </userContext.Provider>
            
