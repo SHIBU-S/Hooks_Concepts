@@ -1,5 +1,5 @@
 
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import { Container,Row,Col } from "react-bootstrap";
 
 
@@ -10,10 +10,10 @@ function usereducerfunc(state,action)
             return {count : state.count+1 , color : "Blue" , backgroundColor : "Black"};
         
         case "Decrement":
-            return {count : state.count-1 , color : "White" , backgroundColor : "Blue"};
+            return {count : state.count-1 , color : "White" , backgroundColor : "brown"};
 
         case "Reset":
-            return {count : 0 , color : "Blue" , backgroundColor : "red"};
+            return {count : 0 , color : "yellow" , backgroundColor : "red"};
 
         default:
             throw Error("Error");
@@ -44,7 +44,7 @@ function Sampleprgm()
 
     return(
         <>
-            <Container className="border mt-5">
+            <Container className="mt-5">
                 <Row>
                     <h2 style={{color : "green"}}>UseReducer Hooks Concept</h2>
                     <Col className="p-5" style={{backgroundColor : state.backgroundColor}}>
