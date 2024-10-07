@@ -18,12 +18,12 @@ function UseReducerTask() {
     const [filteredname,setfilteredname] = useState("");
 
 
-    function handleChange(e)
-    {
-        const NAME = e.target.name;
-        const VALUE = e.target.value;
-        setFormData((prevState) => {    return{ ...prevState, [NAME]: VALUE }   });
-    };
+    // function handleChange(e)
+    // {
+    //     const NAME = e.target.name;
+    //     const VALUE = e.target.value;
+    //     setFormData((prevState) => {    return{ ...prevState, [NAME]: VALUE }   });
+    // };
 
 
     function addDetails() 
@@ -93,10 +93,16 @@ function UseReducerTask() {
                 <h2 style={{ color: "green" }}>UseReducer Task</h2>
                 <Row>
                     <Col>
-                        ID: <input type="number" name="Id" value={formData.Id} onChange={handleChange} placeholder="id.." />
+                        {/* ID: <input type="number" name="Id" value={formData.Id} onChange={handleChange} placeholder="id.." />
                         Name: <input type="text" name="Name" value={formData.Name} onChange={handleChange} placeholder="name.." />
                         Age: <input type="number" name="Age" value={formData.Age} onChange={handleChange} placeholder="age.." />
                         State: <input type="text" name="State" value={formData.State} onChange={handleChange} placeholder="state.." />
+                            <button onClick={addDetails}>Add Details</button> */}
+                            
+                        ID: <input type="number"   onChange={(e)=>setFormData((previousState)=>{return {...previousState,Id:e.target.value}})} placeholder="id.." />
+                        Name: <input type="text"   onChange={(e)=>setFormData((previousState)=>{return {...previousState,Name:e.target.value}})} placeholder="name.." />
+                        Age: <input type="number"  onChange={(e)=>setFormData((previousState)=>{return {...previousState,Age:e.target.value}})} placeholder="age.." />
+                        State: <input type="text"  onChange={(e)=>setFormData((previousState)=>{return {...previousState,State:e.target.value}})} placeholder="state.." />
                             <button onClick={addDetails}>Add Details</button>
                     </Col>
                 </Row>

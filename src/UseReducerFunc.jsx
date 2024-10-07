@@ -16,7 +16,6 @@ function myFunction(state, action)
         case "Filtername":
             return state.filter((filtered)=>filtered.Name.toLowerCase() === action.filter.toLowerCase());
         
-
         default:
             return state;
     }
