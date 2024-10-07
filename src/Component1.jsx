@@ -21,6 +21,7 @@ function Component1(){
 
     return(
         <>
+            <h2 style={{color : "green"}}>UseContext Hooks Concept</h2>
             <userContext.Provider value={{nameresult,setnameresult,passwordresult,setpasswordresult,emailresult,setemailresult,genderresult,setgenderresult,phnoresult,setphnoresult, display,setdisplay,displaypwd,setdisplaypwd,displayemail,setdisplayemail,displaygender,setdisplaygender,displayphno,setdisplayphno, phno,setphno}}>
             <h3>Hello {display} {phno} ... Welcoming You</h3>
                 <Form/>

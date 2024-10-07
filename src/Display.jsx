@@ -29,6 +29,8 @@ function Display()
                     </Col>
                 </Row>
             </Container>
+
+            <hr style={{color:"black"}}/>
         </>
     )
     

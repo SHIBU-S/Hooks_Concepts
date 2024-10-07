@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Component1 from './Component1';
-import Sample from './Sample';
 import Sampleprgm from './UseReducer';
+import UseReducerTask from './UseReducerTask';
 
 function App() {
   return (
     <div className="App">
         <Component1/>
-        <Sample/>
         <Sampleprgm/>
+        <UseReducerTask/>
     </div>
   );
 }

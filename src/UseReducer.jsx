@@ -31,11 +31,11 @@ function Sampleprgm()
 
     function incremented(){
         dispatch({type : "Increment"});
-        setresult(`Incremented : ${state.count+1}`);
+        setresult(`(+)Incremented : ${state.count+1}`);
     }
     function decremented(){
         dispatch({type : "Decrement"});
-        setresult(`Decremented : ${state.count-1}`);
+        setresult(`(-)Decremented : ${state.count-1}`);
     }
     function reset(){
         dispatch({type : "Reset"});
@@ -44,7 +44,7 @@ function Sampleprgm()
 
     return(
         <>
-            <Container className="mt-5">
+            <Container className="mt-5 mb-5">
                 <Row>
                     <h2 style={{color : "green"}}>UseReducer Hooks Concept</h2>
                     <Col className="p-5" style={{backgroundColor : state.backgroundColor}}>
@@ -57,9 +57,10 @@ function Sampleprgm()
                     <Col>
                         <p className="p-4 rounded-5" style={{backgroundColor : state.backgroundColor, color : state.color}}>{result}</p>
                     </Col>
-
                 </Row>
             </Container>
+
+            <hr />
         </>
     )
 }
