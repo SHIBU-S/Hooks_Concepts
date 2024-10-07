@@ -7,6 +7,7 @@ const initialState = jsonDatas;
 
 function UseReducerTask() {
     const [state, dispatch] = useReducer(myFunction, initialState);
+
     const [formData, setFormData] = useState({
         Id: '',
         Name: '',
@@ -84,13 +85,24 @@ function UseReducerTask() {
         }
     }
 
+    function sortAtoZ(){
+        dispatch({
+            type : "SortAtoZ"
+        });
+    }
+
+    function sortZtoA(){
+        dispatch({
+            type : "sortZtoA"
+        });
+    }
  
 
 
     return (
         <>
             <Container fluid >
-                <h2 style={{ color: "green" }}>UseReducer Task</h2>
+                <h2 style={{ color: "green" }}>UseReducer Hooks(Task)</h2>
                 <Row>
                     <Col>
                         {/* ID: <input type="number" name="Id" value={formData.Id} onChange={handleChange} placeholder="id.." />
@@ -98,11 +110,11 @@ function UseReducerTask() {
                         Age: <input type="number" name="Age" value={formData.Age} onChange={handleChange} placeholder="age.." />
                         State: <input type="text" name="State" value={formData.State} onChange={handleChange} placeholder="state.." />
                             <button onClick={addDetails}>Add Details</button> */}
-                            
-                        ID: <input type="number"   onChange={(e)=>setFormData((previousState)=>{return {...previousState,Id:e.target.value}})} placeholder="id.." />
-                        Name: <input type="text"   onChange={(e)=>setFormData((previousState)=>{return {...previousState,Name:e.target.value}})} placeholder="name.." />
-                        Age: <input type="number"  onChange={(e)=>setFormData((previousState)=>{return {...previousState,Age:e.target.value}})} placeholder="age.." />
-                        State: <input type="text"  onChange={(e)=>setFormData((previousState)=>{return {...previousState,State:e.target.value}})} placeholder="state.." />
+
+                        ID :    <input type="number" onChange={(e)=>setFormData((previousState)=>{return {...previousState,Id:e.target.value}})} placeholder="id.." />
+                        Name :  <input type="text"   onChange={(e)=>setFormData((previousState)=>{return {...previousState,Name:e.target.value}})} placeholder="name.." />
+                        Age :   <input type="number" onChange={(e)=>setFormData((previousState)=>{return {...previousState,Age:e.target.value}})} placeholder="age.." />
+                        State : <input type="text"   onChange={(e)=>setFormData((previousState)=>{return {...previousState,State:e.target.value}})} placeholder="state.." />
                             <button onClick={addDetails}>Add Details</button>
                     </Col>
                 </Row>
@@ -114,7 +126,7 @@ function UseReducerTask() {
                     </Col>
 
                     <Col>
-                        Enter Name : <input type="text" onChange={(searchedname)=>setsearchedname(searchedname.target.value)} />
+                        Enter Name/State : <input type="text" onChange={(searchedname)=>setsearchedname(searchedname.target.value)} />
                             <button onClick={searchname}>Search Name</button>
                     </Col>
 
@@ -126,11 +138,10 @@ function UseReducerTask() {
 <br />
                 <Row>
                     <Col>
-                    
+                            <button onClick={sortAtoZ}>Sort(AtoZ)</button>
                     </Col>
-
                     <Col>
-                    
+                            <button onClick={sortZtoA}>Sort(ZtoA)</button>
                     </Col>
                 </Row>
             </Container>
