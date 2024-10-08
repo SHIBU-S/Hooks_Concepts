@@ -111,7 +111,7 @@ function Form(){
         }
 
 
-        let pattern3=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;;
+        let pattern3=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         if(email==="")
         {
             setemailresult("Please Enter your email");
